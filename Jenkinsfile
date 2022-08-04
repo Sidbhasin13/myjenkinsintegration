@@ -17,5 +17,4 @@ pipeline {
         snPublishApp(credentialsId: "${CREDENTIALS}", appSysId: "${APPSYSID}", obtainVersionAutomatically: true, url: "${DEVENV}")
       }
     }
-  }
 }
