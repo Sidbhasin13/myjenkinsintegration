@@ -4,7 +4,7 @@ pipeline {
     APPSYSID = '88466fae1b0111106deaff37dc4bcbea'
     BRANCH = "${BRANCH_NAME}"
     USERNAME = 'admin'
-    PASSWORD = '*F08Glrf/jAQ'
+    PASSWORD = '*F08Glrf%2FjAQ'
     DEVENV = 'https://dev92774.service-now.com/'
   }
   stages {
