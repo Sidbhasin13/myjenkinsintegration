@@ -4,7 +4,7 @@ pipeline {
     APPSYSID = '88466fae1b0111106deaff37dc4bcbea'
     BRANCH = "${BRANCH_NAME}"
     CREDENTIALS = 'Servicenow'
-    DEVENV = 'https://dev92774.service-now.com/'
+  }
   }
   stages {
     stage('Build') {
@@ -13,9 +13,9 @@ pipeline {
           branch 'master'
         }
       }
-      sh (
-          curl -k -u ${CREDENTIALS} -X POST -H "Content-Type: application/json" ${DEVENV}/api/now/table/incident -d '{"short_description": "Sidharth test", "urgency": "2", "impact": "2"}'
-      )
+      steps{
+          curl --location --request POST 'https://dev92774.service-now.com/api/now/table/incident' --header 'Content-Type: application/json' -data-raw '{short_description": "Sidharth test","urgency": "2","impact": "2"}'
+      }
     }
   )
 }
