@@ -5,7 +5,7 @@ pipeline {
     BRANCH = "${BRANCH_NAME}"
     USERNAME = 'admin'
     PASSWORD = '*F08Glrf%2FjAQ'
-    DEVENV = 'https://dev92774.service-now.com/'
+    DEVENV = 'dev92774.service-now.com/'
   }
   stages {
     stage('Build') {
