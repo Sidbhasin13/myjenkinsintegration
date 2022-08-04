@@ -13,10 +13,12 @@ pipeline {
           branch 'master'
         }
       }
-      def api = sh(script: """
-          curl -k -u "${CREDENTIALS}"-X POST -H 'Content-Type: application/json' ${DEVENV}/api/now/table/incident --header -d '{"payload": {"short_description": "Sidharth test","urgency": "2","impact": "2"}}'
-        """ 
-    )
+      steps{
+          def api = sh(script: """
+              curl -k -u "${CREDENTIALS}"-X POST -H 'Content-Type: application/json' ${DEVENV}/api/now/table/incident --header -d '{"payload": {"short_description": "Sidharth test","urgency": "2","impact": "2"}}'
+            """ 
+        )
+      }
     }
   }
 }
