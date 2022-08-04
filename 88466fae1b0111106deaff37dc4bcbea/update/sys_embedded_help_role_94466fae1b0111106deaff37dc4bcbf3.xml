@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_embedded_help_role">
+    <sys_embedded_help_role action="INSERT_OR_UPDATE">
+        <order>1000</order>
+        <role display_value="x_511429_appforj_0.user" name="x_511429_appforj_0.user">18466fae1b0111106deaff37dc4bcbf2</role>
+        <sys_class_name>sys_embedded_help_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-04 20:07:49</sys_created_on>
+        <sys_id>94466fae1b0111106deaff37dc4bcbf3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>18466fae1b0111106deaff37dc4bcbf2</sys_name>
+        <sys_package display_value="appforjenkinsintegrations" source="x_511429_appforj_0">88466fae1b0111106deaff37dc4bcbea</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="appforjenkinsintegrations">88466fae1b0111106deaff37dc4bcbea</sys_scope>
+        <sys_update_name>sys_embedded_help_role_94466fae1b0111106deaff37dc4bcbf3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-04 20:07:49</sys_updated_on>
+    </sys_embedded_help_role>
+</record_update>
