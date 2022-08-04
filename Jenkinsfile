@@ -14,7 +14,7 @@ pipeline {
         }
       }
       steps{
-          curl --location --request POST 'https://dev92774.service-now.com/api/now/table/incident' --header 'Content-Type: application/json' -data-raw '{short_description": "Sidharth test","urgency": "2","impact": "2"}'
+          curl --location --request POST 'https://dev92774.service-now.com/api/now/table/incident' --header 'Content-Type: application/json' --data-raw '{short_description": "Sidharth test","urgency": "2","impact": "2"}'
       }
     }
   )
