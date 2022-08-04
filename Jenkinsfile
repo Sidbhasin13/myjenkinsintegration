@@ -14,7 +14,7 @@ pipeline {
       }
       steps{
           sh(script: """
-              curl -X POST -H 'Content-Type: application/json' 'Authorization : Basic YWRtaW46KkYwOEdscmYvakFR' ${DEVENV}/api/now/table/incident --header -d '{"payload": "short_description": "Sidharth test","urgency": "2","impact": "2"}'
+              curl -X POST https://${USERNAME}:${PASSWORD}@${DEVENV}/api/now/table/incident --data-raw json='{"parameter": [{"short_description": "Sidharth test2","urgency": "2","impact": "2"}]}'
             """ 
         )
       }
