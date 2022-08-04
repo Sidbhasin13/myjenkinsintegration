@@ -9,9 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       when {
-        not {
           branch 'master'
-        }
       }
       steps{
           sh(script: """
