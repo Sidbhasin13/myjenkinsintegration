@@ -5,6 +5,11 @@ pipeline {
     BRANCH = "${BRANCH_NAME}"
     CREDENTIALS = 'Servicenow'
     DEVENV = 'https://dev92774.service-now.com/'
+    PAYLOAD = {
+    "short_description": "Sidharth test",
+    "urgency": "2",
+    "impact": "2"
+  }
   }
   stages {
     stage('Build') {
@@ -13,10 +18,9 @@ pipeline {
           branch 'master'
         }
       }
-      steps {
-        snApplyChanges(appSysId: "${APPSYSID}", branchName: "${BRANCH}", url: "${DEVENV}", credentialsId: "${CREDENTIALS}")
-        snPublishApp(credentialsId: "${CREDENTIALS}", appSysId: "${APPSYSID}", obtainVersionAutomatically: true, url: "${DEVENV}")
-      }
+      sh """
+          curl -k -u ${CREDENTIALS} -X POST -H "Content-Type: application/json" ${DEVENV}/api/now/table/incident -d '{"short_description": "Sidharth test", "urgency": "2", "impact": "2"}'
+      """
     }
   }
 }
