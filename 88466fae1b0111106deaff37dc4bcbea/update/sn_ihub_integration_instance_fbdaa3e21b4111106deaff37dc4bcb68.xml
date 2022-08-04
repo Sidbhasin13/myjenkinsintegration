@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_ihub_integration_instance">
+    <sn_ihub_integration_instance action="INSERT_OR_UPDATE">
+        <description>myjenkinsintegration</description>
+        <integration_table>sys_data_source</integration_table>
+        <integration_type>data_import</integration_type>
+        <internal_name/>
+        <name>myjenkinsintegration</name>
+        <record_id>ffdaa3e21b4111106deaff37dc4bcb69</record_id>
+        <sys_class_name>sn_ihub_integration_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2022-08-04 20:27:59</sys_created_on>
+        <sys_id>fbdaa3e21b4111106deaff37dc4bcb68</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>myjenkinsintegration</sys_name>
+        <sys_package display_value="appforjenkinsintegrations" source="x_511429_appforj_0">88466fae1b0111106deaff37dc4bcbea</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="appforjenkinsintegrations">88466fae1b0111106deaff37dc4bcbea</sys_scope>
+        <sys_update_name>sn_ihub_integration_instance_fbdaa3e21b4111106deaff37dc4bcb68</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2022-08-04 20:27:59</sys_updated_on>
+    </sn_ihub_integration_instance>
+</record_update>
