@@ -6,8 +6,10 @@ pipeline {
     CREDENTIALS = 'Servicenow'
     DEVENV = 'https://dev92774.service-now.com/'
   }
-  stage('Build') {
+  stages {
+    stage('Build') {
       when {
+        not {
           branch 'master'
         }
       }
@@ -15,5 +17,6 @@ pipeline {
         snApplyChanges(appSysId: "${APPSYSID}", branchName: "${BRANCH}", url: "${DEVENV}", credentialsId: "${CREDENTIALS}")
         snPublishApp(credentialsId: "${CREDENTIALS}", appSysId: "${APPSYSID}", obtainVersionAutomatically: true, url: "${DEVENV}")
       }
+    }
+  }
 }
-
