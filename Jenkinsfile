@@ -13,9 +13,9 @@ pipeline {
           branch 'master'
         }
       }
-      steps{
-          curl -k -u ${CREDENTIALS} -X POST -H "Content-Type: application/json" ${DEVENV}/api/now/table/incident -d '{"payload": {"short_description": "Sidharth test", "urgency": "2", "impact": "2"}}'
-      }
+      sh (
+          curl -k -u ${CREDENTIALS} -X POST -H "Content-Type: application/json" ${DEVENV}/api/now/table/incident -d '{"short_description": "Sidharth test", "urgency": "2", "impact": "2"}'
+      )
     }
-  }
+  )
 }
