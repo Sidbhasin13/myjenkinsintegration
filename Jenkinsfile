@@ -13,8 +13,12 @@ pipeline {
           branch 'master'
       }
       steps{
+          basic(script: """ 
+              HttpBasicAuth(str:${USERNAME}, str:${PASSWORD})
+          """
+          )
           sh(script: """
-              curl -k -u "${USERNAME}:${PASSWORD}"-X POST -H 'Content-Type: application/json' ${DEVENV}/api/now/table/incident --header -d '{"payload": "short_description": "Sidharth test","urgency": "2","impact": "2"}'
+              curl -k -u "${basic}"-X POST -H 'Content-Type: application/json' ${DEVENV}/api/now/table/incident --header -d '{"payload": "short_description": "Sidharth test","urgency": "2","impact": "2"}'
             """ 
         )
       }
