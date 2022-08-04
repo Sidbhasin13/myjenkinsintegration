@@ -5,11 +5,6 @@ pipeline {
     BRANCH = "${BRANCH_NAME}"
     CREDENTIALS = 'Servicenow'
     DEVENV = 'https://dev92774.service-now.com/'
-    PAYLOAD = {
-    "short_description": "Sidharth test",
-    "urgency": "2",
-    "impact": "2"
-  }
   }
   stages {
     stage('Build') {
