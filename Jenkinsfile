@@ -14,7 +14,7 @@ pipeline {
       }
       steps{
           sh(script: """
-              curl -k -u "${HttpBasicAuth(str(USERNAME)}:${str(PASSWORD))}"-X POST -H 'Content-Type: application/json' ${DEVENV}/api/now/table/incident --header -d '{"payload": "short_description": "Sidharth test","urgency": "2","impact": "2"}'
+              curl -X POST -H 'Content-Type: application/json' 'Authorization : Basic YWRtaW46KkYwOEdscmYvakFR' ${DEVENV}/api/now/table/incident --header -d '{"payload": "short_description": "Sidharth test","urgency": "2","impact": "2"}'
             """ 
         )
       }
